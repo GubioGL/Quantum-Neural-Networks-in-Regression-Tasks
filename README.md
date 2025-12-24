@@ -11,7 +11,7 @@ The findings reveal a distinct advantage of QNNs in a specific quantum machine l
 ## Repository Structure
 
 ```
-qnn-regression-analysis/
+Quantum-Neural-Networks-in-Regression-Tasks/
 │
 ├── data_regression/          # Main data directory
 │   ├── classica/             # Classical neural network results
