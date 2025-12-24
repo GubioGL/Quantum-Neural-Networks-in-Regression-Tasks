@@ -106,12 +106,11 @@ jupyter notebook plots-comparação.ipynb
 If you use this code or data in your research, please cite: 
 
 ```bibtex
-@article{qnn-regression-2025,
+@article{de2025assessing,
   title={Assessing the Advantages and Limitations of Quantum Neural Networks in Regression Tasks},
-  author={[Your Name]},
-  year={2025},
-  journal={[Journal Name]},
-  note={GitHub:  https://github.com/GubioGL/qnn-regression-analysis}
+  author={de Limaa, Gubio G and Farias, Tiago de S and Ricardo, Alexandre C and Boas, Celso Jorge Villa},
+  journal={arXiv preprint arXiv:2509.00854},
+  year={2025}
 }
 ```
 
