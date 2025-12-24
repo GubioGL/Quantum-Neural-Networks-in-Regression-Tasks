@@ -13,7 +13,7 @@ The findings reveal a distinct advantage of QNNs in a specific quantum machine l
 ```
 Quantum-Neural-Networks-in-Regression-Tasks/
 │
-├── data_regression/          # Main data directory
+├── Data/                     # Main data directory
 │   ├── classica/             # Classical neural network results
 │   │   ├── heaviside/        # Heaviside function experiments
 │   │   │   ├── por_layer/    # Comparison by layer
@@ -33,9 +33,8 @@ Quantum-Neural-Networks-in-Regression-Tasks/
 ├── gates.py                  # Quantum gates definitions
 ├── models_parallel.py        # Parallel model execution
 ├── run_parallel_quantum.py   # Quantum experiments runner
-├── plots-predição.py         # Prediction plotting script
 ├── plot-poster-1.ipynb       # Poster visualization notebook
-├── plots-comparação. ipynb    # Comparison analysis notebook
+├── plots-comparação.ipynb    # Comparison analysis notebook
 └── README.md                 # This file
 ```
 
