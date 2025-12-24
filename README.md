@@ -113,15 +113,4 @@ If you use this code or data in your research, please cite:
   year={2025}
 }
 ```
-
-## License
-
-[Add your preferred license here - MIT, Apache 2.0, etc.]
-
-## Contact
-
-For questions or collaborations, please open an issue or contact [your email].
-
 ---
-
-**Note**: This research demonstrates that while QNNs show promise in specific quantum machine learning contexts, careful consideration must be given to the problem domain. The "No Free Lunch" theorem remains relevant in the quantum computing era. 
