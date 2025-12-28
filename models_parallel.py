@@ -12,9 +12,9 @@ from tqdm import tqdm
 from torch.optim.lr_scheduler import StepLR
 
 
-class Network(nn.Module):
+class Quantum_Network(nn.Module):
     def __init__(self, D,number_of_layers):
-        super(Network, self).__init__()
+        super(Quantum_Network, self).__init__()
 
         self.D = D
         self.block1 = nn.Sequential(
@@ -179,7 +179,7 @@ class Network(nn.Module):
 class Train:
     def __init__(self,number_of_layers, D, lr=0.01, device='cpu', retrain_model=False, epochs=100,step_size_=500):
         self.device     = device
-        self.model      = Network(D=D,number_of_layers=number_of_layers).to(self.device)
+        self.model      = Quantum_Network(D=D,number_of_layers=number_of_layers).to(self.device)
         self.optimizer  = torch.optim.Adam(self.model.parameters(), lr=lr)
         
         self.lr_decai   = StepLR(self.optimizer,step_size=step_size_,gamma=0.9)

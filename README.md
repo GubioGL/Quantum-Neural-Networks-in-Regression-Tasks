@@ -13,40 +13,39 @@ The findings reveal a distinct advantage of QNNs in a specific quantum machine l
 ```
 Quantum-Neural-Networks-in-Regression-Tasks/
 │
-├── Data/                     # Main data directory
-│   ├── classica/             # Classical neural network results
-│   │   ├── heaviside/        # Heaviside function experiments
-│   │   │   ├── por_layer/    # Comparison by layer
-│   │   │   └── por_camada/   # Comparison by neuron count
-│   │   └── sino/             # Sinusoidal function experiments
-│   │       ├── por_layer/    # Comparison by layer
-│   │       └── por_camada/   # Comparison by neuron count
+├── Data/                           # Main data directory
+│   ├── classical/                  # Classical neural network results
+│   │   ├── Heaviside_comparing_by_layer/
+│   │   ├── Heaviside_comparing_by_parameter/
+│   │   ├── sino_comparing_by_layer/
+│   │   └── sino_comparing_by_parameter/
 │   │
-│   └── quantica/             # Quantum neural network results
-│       ├── layer_1/          # 100 experiments with 1 layer
-│       ├── layer_2/          # 100 experiments with 2 layers
-│       ├── layer_3/          # 100 experiments with 3 layers
-│       ├── layer_4/          # 100 experiments with 4 layers
-│       └── layer_5/          # 100 experiments with 5 layers
+│   └── quantum/                    # Quantum neural network results
+│       ├── 1layer/                 # 100 experiments with 1 layer
+│       ├── 2layer/                 # 100 experiments with 2 layers
+│       ├── 3layer/                 # 100 experiments with 3 layers
+│       ├── 4layer/                 # 100 experiments with 4 layers
+│       └── 5layer/                 # 100 experiments with 5 layers
 │
-├── ClassicalModel.py         # Classical neural network implementation
-├── gates.py                  # Quantum gates definitions
-├── models_parallel.py        # Parallel model execution
-├── run_parallel_quantum.py   # Quantum experiments runner
-├── plot-poster-1.ipynb       # Poster visualization notebook
-├── plots-comparação.ipynb    # Comparison analysis notebook
-└── README.md                 # This file
+├── ClassicalModel.py               # Classical neural network implementation
+├── gates.py                        # Quantum gates definitions
+├── models_parallel.py              # Quantum model definition and training helpers
+├── run_parallel_quantum.py         # Quantum experiments runner
+├── Figure_2_and_4.ipynb            # Figure generation (paper figures 2 and 4)
+├── Figure_3_and_5.ipynb            # Figure generation (paper figures 3 and 5)
+├── Find_best_results.ipynb         # Sweep to locate best-performing runs
+└── README.md                       
 ```
 
 ## Dataset Description
 
-### Classical Data (`data_regression/classica/`)
+### Classical Data (`Data/classical/`)
 - **Functions tested**: Heaviside and Sinusoidal (sino)
 - **Comparisons**: By layer count and by neuron count per layer
 - **Experiments**: 100 seeds per activation function configuration
 - **Purpose**: Establish classical baseline performance
 
-### Quantum Data (`data_regression/quantica/`)
+### Quantum Data (`Data/quantum/`)
 - **Architecture variations**: 5 different layer configurations
 - **Experiments**:  100 runs per configuration
 - **Purpose**:  Evaluate quantum model performance across different architectures
@@ -66,39 +65,14 @@ Quantum-Neural-Networks-in-Regression-Tasks/
 
 - **`ClassicalModel.py`**: Implements classical neural network architectures for regression tasks
 - **`gates.py`**: Defines quantum gates used in QNN circuits
-- **`models_parallel.py`**: Enables parallel execution of multiple model configurations
+- **`models_parallel.py`**: Defines the `Quantum_Network` class and helpers for training/evaluating quantum models
 - **`run_parallel_quantum.py`**: Orchestrates quantum model experiments
-- **`plots-predição.py`**: Generates prediction visualizations
-- **`plot-poster-1.ipynb`**: Creates publication-ready figures for posters
-- **`plots-comparação.ipynb`**: Analyzes and compares classical vs quantum performance
+- **`Figure_2_and_4.ipynb`**: Generates the paper-ready figures 2 and 4
+- **`Figure_3_and_5.ipynb`**: Generates the paper-ready figures 3 and 5
+- **`Find_best_results.ipynb`**: Searches trained runs to surface best-performing configurations
 
-## Getting Started
 
-### Prerequisites
-```bash
-# Python dependencies (example)
-pip install numpy scipy matplotlib jupyter
-pip install qiskit pennylane torch
-```
 
-### Running Experiments
-
-1. **Classical experiments:**
-```bash
-python ClassicalModel.py
-```
-
-2. **Quantum experiments:**
-```bash
-python run_parallel_quantum.py
-```
-
-3. **Generate visualizations:**
-```bash
-python plots-predição.py
-# Or open Jupyter notebooks
-jupyter notebook plots-comparação.ipynb
-```
 
 ## Citation
 
